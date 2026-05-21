@@ -232,14 +232,6 @@ header.scrolled { padding: 10px 0; background: rgba(3, 2, 4, 0.95); backdrop-fil
 .hero-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 
 /* ==========================================================================
-   5. TRUST BAR
-   ========================================================================== */
-.trust-bar { border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); padding: 32px 0; background: rgba(0,0,0,0.4); }
-.trust-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
-.trust-item { display: flex; align-items: center; gap: 16px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); }
-.trust-item::before { content: ''; display: block; width: 8px; height: 8px; background: var(--color-gold); box-shadow: 0 0 10px var(--color-gold); }
-
-/* ==========================================================================
    6. ABOUT (Was ist BBK)
    ========================================================================== */
 .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
@@ -381,7 +373,6 @@ footer { background: var(--bg-base); padding: 80px 0 40px 0; border-top: 1px sol
     }
     .nav-links.active { height: calc(100vh - 70px); }
     .nav-links a { font-size: 1.2rem; display: block; padding: 10px; }
-    .trust-content { justify-content: center; gap: 15px;}
     .fg-grid, .varieties-grid, .phil-grid { grid-template-columns: 1fr; }
     .phil-grid { text-align: center; }
     .contact-info { flex-direction: column; gap: 40px; }
