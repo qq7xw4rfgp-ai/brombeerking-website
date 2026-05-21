@@ -1,0 +1,433 @@
+/* ==========================================================================
+   1. CSS VARIABLEN (Deep Premium Theme)
+   ========================================================================== */
+:root {
+    /* Grundfarben - Extrem Dunkel & Tief */
+    --bg-base: #030204; 
+    --bg-surface: rgba(20, 18, 24, 0.4); 
+    --bg-surface-hover: rgba(35, 30, 40, 0.6);
+    
+    /* Markenfarben */
+    --color-cream: #F4F0E6;      
+    --color-blackberry: #661D4C; 
+    --color-blackberry-dark: #2A0C1F;
+    --color-forest: #0D1C13;     
+    --color-gold: #D4AF37;       
+    --color-gold-dim: rgba(212, 175, 55, 0.2);
+    
+    /* Textfarben */
+    --text-main: #F4F0E6;
+    --text-muted: #8E8A8F;
+    --text-dark: #0A090B;
+
+    /* Borders & UI */
+    --border-glass: rgba(255, 255, 255, 0.04);
+    --border-glass-bright: rgba(255, 255, 255, 0.1);
+    --radius-md: 16px;
+    --radius-lg: 32px;
+    --radius-pill: 100px;
+    
+    /* Typografie */
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Layout */
+    --container-w: 1300px;
+    --transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* ==========================================================================
+   2. RESET, BASIS & NOISE TEXTURE
+   ========================================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { 
+    scroll-behavior: smooth; 
+    background-color: var(--bg-base);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-base);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* SVG Noise Overlay (Film Grain für organischen Premium Look) */
+.noise-overlay {
+    position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Massive Ambient Glows */
+.ambient-glow {
+    position: fixed; border-radius: 50%; filter: blur(140px); z-index: -1; opacity: 0.15; pointer-events: none;
+}
+.glow-1 { top: -20%; left: -10%; width: 70vw; height: 70vw; background: var(--color-blackberry); }
+.glow-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: var(--color-forest); }
+.glow-3 { top: 40%; left: 50%; width: 40vw; height: 40vw; background: var(--color-gold); opacity: 0.05; transform: translate(-50%, -50%); }
+
+/* Typografie */
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; line-height: 0.95; color: var(--color-cream); margin-bottom: 20px;}
+h1 { font-size: clamp(3rem, 7vw, 7rem); letter-spacing: -0.04em; }
+h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: -0.02em; }
+h3 { font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -0.01em; }
+p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.15rem; font-weight: 300; }
+
+a { text-decoration: none; color: inherit; transition: all var(--transition); display: inline-block; }
+
+.container { max-width: var(--container-w); margin: 0 auto; padding: 0 32px; }
+section { padding: 140px 0; position: relative; }
+
+/* Text Effekte */
+.gold-gradient-text {
+    background: linear-gradient(135deg, #FFF 0%, var(--color-gold) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.accent-heading { 
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; 
+    color: var(--color-gold); margin-bottom: 1.5rem; display: block; font-weight: 600;
+}
+
+/* Scroll-Reveal */
+.reveal { opacity: 0; transform: translateY(60px); transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* Premium Buttons */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 18px 40px; border-radius: var(--radius-pill); font-size: 1.05rem; font-weight: 500;
+    cursor: pointer; border: 1px solid transparent; transition: all var(--transition);
+    position: relative; overflow: hidden; z-index: 1;
+}
+.btn-primary { background: var(--color-cream); color: var(--text-dark); }
+.btn-primary:hover { background: var(--color-gold); transform: translateY(-3px); box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25); }
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.02); color: var(--color-cream);
+    border: 1px solid var(--border-glass-bright); backdrop-filter: blur(10px);
+}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.08); border-color: var(--color-gold); transform: translateY(-3px); }
+
+/* Edle Glas-Karten (Klickbar) */
+a.glass-card {
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid var(--border-glass);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+a.glass-card:hover { transform: translateY(-10px); border-top-color: var(--color-gold); border-color: var(--border-glass-bright); background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 40px rgba(212,175,55,0.05); }
+
+/* Einfache Div Glass-Cards (Nicht klickbar) */
+div.glass-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid var(--border-glass); border-top: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg); padding: 50px; backdrop-filter: blur(20px);
+}
+
+/* Badges */
+.badge {
+    display: inline-block; padding: 6px 14px; border-radius: var(--radius-pill);
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; border: 1px solid;
+}
+.badge-gold { color: var(--color-gold); border-color: var(--color-gold-dim); background: rgba(212, 175, 55, 0.1); }
+.badge-purple { color: #E8B4D9; border-color: rgba(102, 29, 76, 0.5); background: rgba(102, 29, 76, 0.2); }
+.badge-outline { color: var(--text-muted); border-color: var(--border-glass-bright); background: rgba(255,255,255,0.02); }
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION & LOGO
+   ========================================================================== */
+header {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+    background: linear-gradient(to bottom, rgba(3,2,4,0.9) 0%, rgba(3,2,4,0) 100%);
+    padding: 20px 0; transition: all var(--transition);
+}
+header.scrolled { padding: 10px 0; background: rgba(3, 2, 4, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-glass); }
+
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+/* Überarbeitetes Logo mit Bild */
+.logo { 
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--font-heading); font-size: 2rem; font-weight: normal; 
+    color: var(--color-cream); letter-spacing: 0.5px;
+}
+.header-logo-img {
+    height: 85px; 
+    width: auto;
+    border-radius: 6px;
+    filter: drop-shadow(0 0 10px rgba(212,175,55,0.3)); /* Goldener Glow um das Logo */
+}
+.logo-text-wrapper {
+    display: flex; align-items: baseline; gap: 8px;
+}
+.logo-sub { 
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; 
+    color: var(--color-gold); font-family: var(--font-body); font-weight: 600; 
+}
+
+.nav-links { display: flex; list-style: none; gap: 35px; position: relative;}
+.nav-links a { 
+    font-size: 0.85rem; font-weight: 500; color: var(--text-muted); 
+    text-transform: uppercase; letter-spacing: 1.5px; position: relative;
+    padding: 5px 0;
+}
+.nav-links a:hover { color: var(--color-cream); }
+
+/* Aktiver Navigationspunkt */
+.nav-links a.active { color: var(--color-gold); }
+.nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px;
+    background: var(--color-gold); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: right;
+}
+.nav-links a.active::after { transform: scaleX(1); transform-origin: left; }
+
+.mobile-btn { display: none; background: none; border: none; color: var(--color-cream); font-size: 1.5rem; cursor: pointer; }
+
+/* ==========================================================================
+   4. HERO SEKTION & CSS-GLAS (Premium Manufaktur Objekt)
+   ========================================================================== */
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+
+.hero-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2rem; }
+.hero-content p { font-size: 1.35rem; max-width: 550px; margin-bottom: 3.5rem; color: #B0AEB3;}
+.hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+
+/* CSS Glas / Produkt Visual */
+.hero-art-wrapper { position: relative; width: 100%; height: 500px; display: flex; justify-content: center; align-items: center; }
+
+.css-jar {
+    position: relative; width: 240px; height: 320px;
+    animation: float 8s ease-in-out infinite alternate;
+}
+
+/* Gold-violetter Glow hinter dem Glas */
+.jar-glow {
+    position: absolute; inset: -40px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,0.4) 0%, rgba(102,29,76,0.3) 40%, transparent 70%);
+    filter: blur(40px); z-index: 1;
+}
+
+/* Der Glas-Körper */
+.jar-body {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.6) 100%);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 30px 30px 45px 45px; /* Leichter Hals oben */
+    box-shadow: inset -15px -15px 40px rgba(0,0,0,0.9), inset 15px 15px 30px rgba(255,255,255,0.1), 0 30px 60px rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    z-index: 3; overflow: hidden;
+}
+
+/* Die Füllung (Honig & Frucht) */
+.jar-content {
+    position: absolute; bottom: 8px; left: 8px; right: 8px; height: 75%;
+    background: linear-gradient(to bottom, rgba(212,175,55,0.8), rgba(102,29,76,0.95));
+    border-radius: 10px 10px 35px 35px;
+    box-shadow: inset 0 20px 20px rgba(0,0,0,0.6);
+    z-index: 2; overflow: hidden;
+}
+
+/* Abstrakte Beeren/Gewürze im Glas */
+.particle { position: absolute; border-radius: 50%; background: var(--color-blackberry-dark); }
+.p1 { width: 14px; height: 14px; bottom: 20%; left: 30%; animation: floatInside 4s infinite alternate; }
+.p2 { width: 8px; height: 8px; bottom: 45%; right: 25%; animation: floatInside 5s infinite alternate-reverse; }
+.p3 { width: 18px; height: 18px; bottom: 15%; right: 35%; background: var(--color-gold); opacity: 0.6; animation: floatInside 6s infinite alternate; }
+
+/* Der Glasdeckel */
+.jar-lid {
+    position: absolute; top: -16px; left: 5%; width: 90%; height: 35px;
+    background: linear-gradient(to right, #1a1a1a, #3a3a3a, #0a0a0a);
+    border-radius: 6px 6px 4px 4px; border-top: 2px solid #5a5a5a;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.1);
+    z-index: 4;
+}
+
+/* Glas-Reflexion */
+.jar-highlight {
+    position: absolute; top: 10%; left: 15%; width: 12px; height: 70%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    border-radius: 20px; transform: rotate(4deg); filter: blur(1px); z-index: 4;
+}
+
+@keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-20px); } }
+@keyframes floatInside { 0% { transform: translate(0, 0); } 100% { transform: translate(10px, -15px); } }
+
+/* ==========================================================================
+   5. TRUST BAR
+   ========================================================================== */
+.trust-bar { border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); padding: 32px 0; background: rgba(0,0,0,0.4); }
+.trust-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
+.trust-item { display: flex; align-items: center; gap: 16px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); }
+.trust-item::before { content: ''; display: block; width: 8px; height: 8px; background: var(--color-gold); box-shadow: 0 0 10px var(--color-gold); }
+
+/* ==========================================================================
+   6. ABOUT (Was ist BBK)
+   ========================================================================== */
+.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
+.about-text { position: sticky; top: 150px; }
+.about-cards { display: flex; flex-direction: column; gap: 40px; }
+
+.about-card { padding: 60px; min-height: 320px; display: flex; flex-direction: column; justify-content: center;}
+.about-card h3 { font-size: 2.2rem; margin-bottom: 20px; position: relative; z-index: 2;}
+.about-card p { font-size: 1.1rem; position: relative; z-index: 2;}
+
+.card-number {
+    position: absolute; right: -20px; bottom: -50px;
+    font-family: var(--font-heading); font-size: 14rem; line-height: 1;
+    color: rgba(255,255,255,0.02); z-index: 0; pointer-events: none;
+}
+
+/* ==========================================================================
+   7. FERMENTED GOLD TEASER
+   ========================================================================== */
+.fg-section { background: radial-gradient(circle at center, rgba(42, 12, 31, 0.4) 0%, transparent 70%); }
+.fg-teaser { text-align: center; max-width: 900px; margin: 0 auto 5rem auto; }
+.fg-teaser p { font-size: 1.5rem; color: #D1CFD4; }
+
+.fg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border-glass-bright); border: 1px solid var(--border-glass-bright); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 4rem;}
+.fg-module { background: var(--bg-base); padding: 50px 30px; text-align: center; transition: var(--transition); }
+.fg-module:hover { background: rgba(255,255,255,0.03); }
+.fg-module h4 { font-family: var(--font-body); font-size: 1.1rem; color: var(--color-gold); margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase;}
+.fg-module p { font-size: 1rem; margin: 0; }
+
+/* ==========================================================================
+   8. SORTEN VORSCHAU (Komplett klickbare Karten)
+   ========================================================================== */
+.varieties-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 4rem;}
+
+a.variety-card {
+    display: block; padding: 40px; border-radius: var(--radius-md);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.03), transparent);
+    border: 1px solid var(--border-glass);
+    position: relative; overflow: hidden; transition: var(--transition); cursor: pointer;
+}
+a.variety-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+    background: var(--v-color, var(--color-gold));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+a.variety-card:hover { background: rgba(255,255,255,0.06); border-color: var(--border-glass-bright); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+a.variety-card:hover::after { transform: scaleX(1); }
+
+.variety-card h4 { font-size: 1.8rem; margin-bottom: 10px; }
+.variety-claim { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 20px; display: block; font-weight: 500;}
+
+.variety-link-text { font-size: 0.95rem; color: var(--text-main); display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;}
+.variety-link-text::after { content: '→'; color: var(--color-gold); transition: transform 0.3s; }
+a.variety-card:hover .variety-link-text::after { transform: translateX(5px); }
+a.variety-card:hover .variety-link-text { color: var(--color-gold); }
+
+/* ==========================================================================
+   9. PIPELINE / PRODUKTWELT (Komplett klickbare Karten)
+   ========================================================================== */
+.products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 4rem;}
+.product-item h3 { font-size: 2.8rem; margin-bottom: 20px; }
+.product-badge { display: inline-block; padding: 8px 16px; border: 1px solid var(--color-gold-dim); border-radius: var(--radius-pill); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-gold); margin-bottom: 30px; background: rgba(212,175,55,0.05);}
+.badge-outline-card { color: var(--text-muted); border-color: var(--border-glass); background: transparent; }
+
+/* ==========================================================================
+   10. PHILOSOPHIE
+   ========================================================================== */
+.philosophy { background: #000; border-top: 1px solid rgba(212, 175, 55, 0.15); border-bottom: 1px solid rgba(212, 175, 55, 0.15); text-align: center; overflow: hidden;}
+.phil-line { width: 1px; height: 120px; background: linear-gradient(var(--color-gold), transparent); margin: 0 auto 50px auto; }
+.philosophy h2 { max-width: 900px; margin: 0 auto 3rem auto; }
+.philosophy-text { font-size: 1.8rem; line-height: 1.5; max-width: 900px; margin: 0 auto 5rem auto; font-family: var(--font-heading); font-style: italic; color: #E0DEE3; }
+
+.phil-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; text-align: left; padding-top: 80px; border-top: 1px solid rgba(255,255,255,0.05); position: relative;}
+.phil-grid::before { content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); width: 200px; height: 1px; background: var(--color-gold); box-shadow: 0 0 20px var(--color-gold); }
+.phil-item h4 { font-family: var(--font-body); font-size: 1.2rem; color: var(--color-gold); margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;}
+
+/* ==========================================================================
+   12. ROADMAP (Status)
+   ========================================================================== */
+.roadmap-container { max-width: 900px; margin: 0 auto; position: relative; padding-left: 60px; margin-top: 4rem;}
+.roadmap-container::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.05); }
+.roadmap-phase { position: relative; padding-bottom: 80px; }
+.roadmap-phase:last-child { padding-bottom: 0; }
+
+.phase-dot {
+    position: absolute; left: -66px; top: 8px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--bg-base); border: 2px solid var(--text-muted); transition: all var(--transition);
+}
+.roadmap-phase.active .phase-dot { background: var(--color-gold); border-color: var(--color-gold); box-shadow: 0 0 20px rgba(212,175,55,0.6); }
+
+.roadmap-phase h3 { margin-bottom: 15px; font-size: 2rem; color: var(--text-muted); transition: color var(--transition);}
+.roadmap-phase.active h3 { color: var(--color-cream); }
+.phase-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: var(--color-gold); margin-bottom: 10px; display: block;}
+
+/* ==========================================================================
+   13. KONTAKT & FOOTER
+   ========================================================================== */
+.contact-box { background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 100px 60px; text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,0.5);}
+.contact-info { display: flex; justify-content: center; gap: 60px; margin: 60px 0; flex-wrap: wrap; }
+.contact-info p { margin: 0; color: var(--color-cream); font-size: 1.25rem; font-weight: 400;}
+.contact-info span { display: block; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;}
+.legal-warning { font-size: 0.85rem; color: #666; border-top: 1px solid var(--border-glass); padding-top: 30px; max-width: 700px; margin: 60px auto 0 auto; }
+
+footer { background: #000; padding: 80px 0 40px 0; border-top: 1px solid var(--border-glass); text-align: center; }
+.footer-logo { font-family: var(--font-heading); font-size: 2.5rem; color: var(--color-cream); margin-bottom: 15px; }
+
+/* Footer Image Logo Style */
+.footer-logo-img {
+    height: 150px;
+    width: auto;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 20px rgba(212,175,55,0.2));
+}
+
+.footer-links { display: flex; justify-content: center; gap: 40px; margin: 40px 0; flex-wrap: wrap;}
+.footer-links a { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+.footer-links a:hover { color: var(--color-gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; font-size: 0.85rem; color: #555; }
+
+/* ==========================================================================
+   14. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+    .hero-badges { justify-content: center; }
+    .hero-content p { margin: 0 auto 3rem auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-art-wrapper { height: 450px; }
+    .about-grid, .products-grid { grid-template-columns: 1fr; gap: 60px; }
+    .about-text { position: relative; top: 0; text-align: center; }
+    .fg-grid { grid-template-columns: repeat(2, 1fr); }
+    .varieties-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    section { padding: 100px 0; }
+    .mobile-btn { display: block; }
+    .nav-links {
+        position: fixed; top: 70px; left: 0; width: 100%; height: 0;
+        background: rgba(3, 2, 4, 0.98); backdrop-filter: blur(20px);
+        flex-direction: column; align-items: center; justify-content: center; gap: 40px;
+        overflow: hidden; transition: all var(--transition); border-bottom: 1px solid var(--border-glass);
+    }
+    .nav-links.active { height: calc(100vh - 70px); }
+    .nav-links a { font-size: 1.2rem; display: block; padding: 10px; }
+    .trust-content { justify-content: center; gap: 15px;}
+    .fg-grid, .varieties-grid, .phil-grid { grid-template-columns: 1fr; }
+    .phil-grid { text-align: center; }
+    .contact-info { flex-direction: column; gap: 40px; }
+    .contact-box { padding: 60px 30px; }
+    .header-logo-img { height: 60px; } /* Etwas kleiner für Mobile */
+}

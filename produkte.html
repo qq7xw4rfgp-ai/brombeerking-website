@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktübersicht | Brombeerkönig</title>
+    <meta name="description" content="Die aktuelle Pipeline und Produktwelt von Brombeerkönig.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="" class="header-logo-img" onerror="this.style.display='none'">
+                <div class="logo-text-wrapper">Brombeerkönig <span class="logo-sub">BBK</span></div>
+            </a>
+            <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#start" class="nav-item">Start</a></li>
+                <li><a href="index.html#ueber-bbk" class="nav-item">Über BBK</a></li>
+                <li><a href="produkte.html" class="nav-item active">Produkte</a></li>
+                <li><a href="fermented-gold.html" class="nav-item">Fermented Gold</a></li>
+                <li><a href="index.html#philosophie" class="nav-item">Philosophie</a></li>
+                <li><a href="index.html#status" class="nav-item">Status</a></li>
+                <li><a href="index.html#kontakt" class="nav-item">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 80vh;">
+        <section id="pipeline">
+            <div class="container">
+                <div class="reveal">
+                    <span class="accent-heading">Vision & Pipeline</span>
+                    <h2>Produktwelt im Aufbau</h2>
+                    <p style="max-width: 700px; margin-bottom: 3rem;">Hier findest du eine Übersicht aller aktuellen Projekte, Testchargen und geplanten Ideen unserer Manufaktur.</p>
+                </div>
+                
+                <div class="products-grid">
+                    <a href="fermented-gold.html" class="glass-card product-item reveal delay-1">
+                        <div>
+                            <span class="product-badge">Kernprodukt in Entwicklung</span>
+                            <h3>Fermented Gold</h3>
+                            <p>Honigbasierte Fermentationsidee mit Früchten, Gewürzen und natürlichem, komplexem Charakter.</p>
+                        </div>
+                        <span class="variety-link-text">Details ansehen</span>
+                    </a>
+                    <a href="power-bars.html" class="glass-card product-item reveal delay-2">
+                        <div>
+                            <span class="product-badge badge-outline-card">Idee / Testphase</span>
+                            <h3>Power Bars</h3>
+                            <p>Natürliche Riegel und Snackideen aus einfachen, kräftigen Zutaten – kompromisslos ohne versteckten Zuckerzusatz.</p>
+                        </div>
+                        <span class="variety-link-text">Details ansehen</span>
+                    </a>
+                    <a href="frozen-fruits.html" class="glass-card product-item reveal delay-1">
+                        <div>
+                            <span class="product-badge badge-outline-card">Geplant</span>
+                            <h3>Frozen Fruits</h3>
+                            <p>Selektierte Beeren und Früchte als hochwertige Grundlage für zukünftige Tiefkühl- und eigene Rezeptprodukte.</p>
+                        </div>
+                        <span class="variety-link-text">Details ansehen</span>
+                    </a>
+                    <a href="natural-spices.html" class="glass-card product-item reveal delay-2">
+                        <div>
+                            <span class="product-badge badge-outline-card">Geplant</span>
+                            <h3>Natural Spices</h3>
+                            <p>Sorgfältig ausgewählte Kräuter, Gewürze und Mischungen ganz ohne unnötige Zusätze oder Rieselhilfen.</p>
+                        </div>
+                        <span class="variety-link-text">Details ansehen</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 50px;">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="" class="footer-logo-img" onerror="this.style.display='none'">
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2024 Brombeerkönig.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
