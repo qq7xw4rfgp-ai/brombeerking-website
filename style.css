@@ -258,7 +258,7 @@ header.scrolled { padding: 10px 0; background: rgba(3, 2, 4, 0.95); backdrop-fil
 .fg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border-glass-bright); border: 1px solid var(--border-glass-bright); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 4rem;}
 .fg-module { background: var(--bg-base); padding: 50px 30px; text-align: center; transition: var(--transition); }
 .fg-module:hover { background: rgba(255,255,255,0.03); }
-.fg-module h4 { font-family: var(--font-body); font-size: 1.1rem; color: var(--color-gold); margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase;}
+.fg-module h4 { font-family: var(--font-body); font-size: 1.1rem; color: var(--module-color, var(--color-gold)); margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase;}
 .fg-module p { font-size: 1rem; margin: 0; }
 
 /* ==========================================================================
