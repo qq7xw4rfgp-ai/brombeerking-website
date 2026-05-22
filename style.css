@@ -313,6 +313,21 @@ a.variety-card.rank-silver:hover {
 .product-badge { display: inline-block; padding: 8px 16px; border: 1px solid var(--color-gold-dim); border-radius: var(--radius-pill); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-gold); margin-bottom: 30px; background: rgba(212,175,55,0.05);}
 .badge-outline-card { color: var(--text-muted); border-color: var(--border-glass); background: transparent; }
 
+/* Farbige Glow-Badges für Produkte nach neuer Farblogik */
+.product-badge.glow-gold { color: #D6A829; border-color: rgba(214, 168, 41, 0.3); background: rgba(214, 168, 41, 0.05); box-shadow: 0 0 15px rgba(214, 168, 41, 0.25); }
+.product-badge.glow-gold-orange { color: #C8922D; border-color: rgba(200, 146, 45, 0.3); background: rgba(200, 146, 45, 0.05); box-shadow: 0 0 15px rgba(200, 146, 45, 0.25); }
+.product-badge.glow-red { color: #B64242; border-color: rgba(182, 66, 66, 0.3); background: rgba(182, 66, 66, 0.05); box-shadow: 0 0 15px rgba(182, 66, 66, 0.25); }
+.product-badge.glow-darkred { color: #A65336; border-color: rgba(166, 83, 54, 0.3); background: rgba(166, 83, 54, 0.05); box-shadow: 0 0 15px rgba(166, 83, 54, 0.25); }
+.product-badge.glow-lightgreen { color: #9BCB5A; border-color: rgba(155, 203, 90, 0.3); background: rgba(155, 203, 90, 0.05); box-shadow: 0 0 15px rgba(155, 203, 90, 0.25); }
+.product-badge.glow-lightblue { color: #6BB7D6; border-color: rgba(107, 183, 214, 0.3); background: rgba(107, 183, 214, 0.05); box-shadow: 0 0 15px rgba(107, 183, 214, 0.25); }
+.product-badge.glow-darkblue { color: #315EAA; border-color: rgba(49, 94, 170, 0.3); background: rgba(49, 94, 170, 0.05); box-shadow: 0 0 15px rgba(49, 94, 170, 0.25); }
+.product-badge.glow-darkgreen { color: #2F7D4F; border-color: rgba(47, 125, 79, 0.3); background: rgba(47, 125, 79, 0.05); box-shadow: 0 0 15px rgba(47, 125, 79, 0.25); }
+.product-badge.glow-silver { color: #E8E3DA; border-color: rgba(232, 227, 218, 0.3); background: rgba(232, 227, 218, 0.05); box-shadow: 0 0 15px rgba(232, 227, 218, 0.25); }
+.product-badge.glow-orangegold { color: #C47A2C; border-color: rgba(196, 122, 44, 0.3); background: rgba(196, 122, 44, 0.05); box-shadow: 0 0 15px rgba(196, 122, 44, 0.25); }
+.product-badge.glow-violet { color: #A06CD5; border-color: rgba(160, 108, 213, 0.3); background: rgba(160, 108, 213, 0.05); box-shadow: 0 0 15px rgba(160, 108, 213, 0.25); }
+.product-badge.glow-bronze { color: #B87333; border-color: rgba(184, 115, 51, 0.3); background: rgba(184, 115, 51, 0.05); box-shadow: 0 0 15px rgba(184, 115, 51, 0.25); }
+.product-badge.glow-amber { color: #E0A83A; border-color: rgba(224, 168, 58, 0.3); background: rgba(224, 168, 58, 0.05); box-shadow: 0 0 15px rgba(224, 168, 58, 0.25); }
+
 /* ==========================================================================
    10. PHILOSOPHIE
    ========================================================================== */
