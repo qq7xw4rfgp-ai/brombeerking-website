@@ -311,6 +311,7 @@ a.variety-card.rank-silver:hover {
 .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 4rem;}
 .product-item h3 { font-size: 2.8rem; margin-bottom: 20px; }
 .product-badge { display: inline-block; padding: 8px 16px; border: 1px solid var(--color-gold-dim); border-radius: var(--radius-pill); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-gold); margin-bottom: 30px; background: rgba(212,175,55,0.05);}
+.product-badge.large { font-size: 1rem; padding: 12px 24px; letter-spacing: 3px; }
 .badge-outline-card { color: var(--text-muted); border-color: var(--border-glass); background: transparent; }
 
 /* Farbige Glow-Badges für Produkte nach neuer Farblogik */
@@ -417,6 +418,23 @@ footer { background: var(--bg-base); padding: 80px 0 40px 0; border-top: 1px sol
 .modal-close:hover { color: var(--color-gold); }
 .modal-buttons { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
 .modal-btn { width: 100%; }
+
+/* ==========================================================================
+   16. WISSENSARCHIV / ARTIKEL
+   ========================================================================== */
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #E0DEE3;
+}
+.article-content h3 {
+    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: var(--color-gold);
+}
 
 /* ==========================================================================
    14. RESPONSIVE DESIGN
