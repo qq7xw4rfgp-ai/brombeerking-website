@@ -61,4 +61,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Kontakt Modal Pop-Up
+    const contactModal = document.getElementById('contact-modal');
+    const modalClose = document.getElementById('modal-close');
+    const contactTriggers = document.querySelectorAll('a[href$="#kontakt"]');
+
+    if (contactModal) {
+        contactTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault(); // Verhindert das Scrollen
+                contactModal.classList.add('active');
+            });
+        });
+
+        if (modalClose) {
+            modalClose.addEventListener('click', () => { contactModal.classList.remove('active'); });
+        }
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) { contactModal.classList.remove('active'); }
+        });
+    }
 });
