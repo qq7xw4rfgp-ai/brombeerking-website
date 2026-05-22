@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch-Archiv | Brombeerkönig</title>
+    <meta name="description" content="Transparentes Archiv für Testchargen, Lernpunkte und Produktentwicklung der Brombeerkönig Manufaktur.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="" class="header-logo-img" onerror="this.style.display='none'">
+                <div class="logo-text-wrapper">Brombeerkönig <span class="logo-sub">BBK</span></div>
+            </a>
+            <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#start" class="nav-item">Start</a></li>
+                <li><a href="produkte.html" class="nav-item">Produkte</a></li>
+                <li><a href="wissen.html" class="nav-item">Wissen</a></li>
+                <li><a href="community.html" class="nav-item">Community</a></li>
+                <li><a href="ueber-uns.html" class="nav-item">Über BBK</a></li>
+                <li><a href="#kontakt" class="nav-item">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 80vh;">
+        
+        <!-- HERO -->
+        <section id="batch-start" class="fg-section">
+            <div class="container">
+                <div class="fg-teaser reveal" style="margin-bottom: 2rem;">
+                    <span class="accent-heading" style="color: var(--color-gold);">Dokumentation & Transparenz</span>
+                    <h2>Batch-Archiv</h2>
+                    <p style="max-width: 800px; margin: 0 auto;">Hier dokumentieren wir unsere Testchargen, Fehler und Erfolge. Ein transparenter Einblick in die Entwicklung unserer Rezepturen – vom ersten Versuch bis zum finalen Produkt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BATCH LISTE -->
+        <section id="batches" style="padding-top: 20px;">
+            <div class="container">
+                <div class="batch-list">
+                    
+                    <!-- BATCH 002 -->
+                    <div class="glass-card batch-card reveal delay-1">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch BBK-PB-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>BBK-PB-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q3 / 2024</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Power Bars</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Frucht & Nuss</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Ergebnis</h4>
+                                <p>Erste Prototypen für die Textur. Die Kombination aus Datteln und Mandeln bringt eine gute Grundstabilität, jedoch ist der Biss noch etwas zu weich für den Alltag.</p>
+                                <h4>Lernpunkt</h4>
+                                <p>In der nächsten Charge werden wir den Anteil an trockenen Kernen erhöhen, um mehr Struktur zu schaffen, ohne auf künstliche Bindemittel zurückgreifen zu müssen.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH 001 -->
+                    <div class="glass-card batch-card reveal delay-2">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch BBK-FG-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>BBK-FG-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2024</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Brombeere</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Ergebnis</h4>
+                                <p>Die wilde Fermentation ist sehr stark gestartet. Die Brombeere hat dem rohen Honig eine tiefviolette Farbe und eine überraschend lebendige, feine Säure verliehen.</p>
+                                <h4>Lernpunkt</h4>
+                                <p>Der Druckaufbau im Glas war höher als erwartet. Reifezeit, Fruchtmenge und das Entlüften der Gläser müssen für kommende Chargen genauer standardisiert werden.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSPARENZ HINWEIS GLOBAL -->
+        <section id="hinweise" style="padding-top: 50px;">
+            <div class="container">
+                <div class="transparency-box reveal">
+                    <h4>Wichtiger Hinweis</h4>
+                    <p><strong>Manufaktur im Aufbau:</strong> Die hier dokumentierten Batches sind reine Testchargen zur Produktentwicklung. Es findet noch kein offizieller Verkauf statt.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 50px;">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="" class="footer-logo-img" onerror="this.style.display='none'">
+            </div>
+            <div class="footer-links">
+                <a href="produkte.html">Produkte</a>
+                <a href="ressourcen.html">Ressourcen</a>
+                <a href="bibliothek.html">Bibliothek</a>
+                <a href="community.html">Community</a>
+                <a href="ueber-uns.html">Über BBK</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+                <a href="#" class="disabled-link">Händler / B2B</a>
+                <a href="#" class="disabled-link">Presse</a>
+                <a href="batch-archiv.html">Batch-Archiv</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2024 Brombeerkönig.</p>
+        </div>
+    </footer>
+
+    <!-- KONTAKT MODAL -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <span class="accent-heading">Austausch & Anfrage</span>
+            <h3 style="font-size: 2rem; margin-bottom: 10px;">Kontakt</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">Wähle deinen bevorzugten Weg, um mit uns ins Gespräch zu kommen.</p>
+            <!-- Modal Buttons -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

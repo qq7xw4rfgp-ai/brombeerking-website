@@ -35,14 +35,34 @@
     </header>
 
     <main style="padding-top: 100px; min-height: 80vh;">
-        <section id="info" class="fg-section">
-            <div class="container">
-                <div class="fg-teaser reveal">
-                    <span class="accent-heading" style="color: #D6A829;">Fokusprojekt in Entwicklung</span>
-                    <h2>Fermented Gold</h2>
-                    <p>Honig. Frucht. Zeit. Charakter.<br> Eines der ersten Kernprodukte von Brombeerkönig: Ein komplexes, honigbasiertes Fermentationsprojekt mit tiefgehenden Frucht- und Gewürzprofilen.</p>
+        <!-- 1. PRODUKT-HERO -->
+        <section id="produkt-hero" class="fg-section" style="padding-top: 40px;">
+            <div class="container two-col-grid">
+                <div class="reveal">
+                    <span class="product-badge glow-gold" style="margin-bottom: 20px;">Fokusprojekt in Entwicklung</span>
+                    <h1 style="font-size: 4rem; margin-bottom: 20px; color: var(--color-cream);">Fermented Gold</h1>
+                    <p style="font-size: 1.5rem; color: #D6A829; margin-bottom: 20px; font-family: var(--font-heading); font-style: italic;">Honig. Frucht. Zeit. Charakter.</p>
+                    <p>Eines der ersten Kernprodukte von Brombeerkönig: Ein komplexes, honigbasiertes Fermentationsprojekt mit tiefgehenden Frucht- und Gewürzprofilen.</p>
+                    <div class="hero-buttons" style="justify-content: flex-start; margin-top: 30px;">
+                        <a href="#sorten" class="btn btn-primary">Sorten entdecken</a>
+                        <a href="#produkt-warteliste" class="btn btn-secondary">Zur Warteliste</a>
+                    </div>
                 </div>
-                
+                <div class="reveal delay-1">
+                    <!-- TODO: echtes Produktfoto einfügen -->
+                    <div class="placeholder-img portrait">Platzhalter: Fermented Gold Hero-Shot</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. DETAILS & GRUNDIDEE -->
+        <section id="details" style="padding-top: 80px;">
+            <div class="container">
+                <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="accent-heading" style="color: #D6A829;">Konzept & Idee</span>
+                    <h2>Warum dieses Produkt?</h2>
+                    <p style="max-width: 700px; margin: 0 auto;">Fermented Gold ist unsere Interpretation der Wilden Fermentation. Die Kraft von rohem Honig trifft auf sorgfältig ausgewählte Früchte. Wir lassen der Natur Zeit, um außergewöhnliche Aromen zu entwickeln, anstatt auf schnelle künstliche Prozesse zu setzen.</p>
+                </div>
                 <div class="fg-grid reveal delay-1" style="--module-color: #D6A829;">
                     <div class="fg-module">
                         <h4>01. Honigbasis</h4>
@@ -64,6 +84,7 @@
             </div>
         </section>
 
+        <!-- 3. SORTEN / VARIANTEN -->
         <section id="sorten" style="padding-top: 50px;">
             <div class="container">
                 <div class="reveal" style="text-align: center; margin-bottom: 2rem;">
@@ -163,6 +184,41 @@
                         <p>Die erste Rang-2-Sorte neben Wintertraum: ein stärkeres Profil mit Ingwer, Zitrus, Beeren oder ausgewählten Botanicals. Entwickelt als intensiver Honigferment-Prototyp für kalte Tage, Regeneration und natürliche Stärke.</p>
                         <span class="variety-link-text">Zur Sorte</span>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SICHERHEIT / HINWEISE -->
+        <section id="hinweise" style="padding-top: 50px;">
+            <div class="container">
+                <div class="transparency-box reveal">
+                    <h4>Wichtiger Hinweis zur Herstellung</h4>
+                    <p><strong>Manufaktur im Aufbau:</strong> Fermented Gold entsteht aktuell als Versuchsprojekt in limitierten Testchargen. Es findet noch kein offizieller Verkauf statt.</p>
+                    <p><strong>Lebendiges Produkt:</strong> Da es sich um wilde Fermentation handelt, kann sich der Druck in den Gläsern aufbauen und das Produkt leicht sprudeln. Es werden keine medizinischen Versprechen gemacht. Rezepturen werden laufend beobachtet und optimiert.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA / WARTELISTE -->
+        <section id="produkt-warteliste" style="padding-top: 50px;">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <span class="accent-heading">Produkt-Warteliste</span>
+                    <h2>Als Erster erfahren</h2>
+                    <p style="max-width: 700px; margin: 0 auto 40px auto;">Fermented Gold wird unsere erste Linie sein, die in limitierter Stückzahl zugänglich gemacht wird. Trage dich ein, um dabei zu sein.</p>
+                    
+                    <!-- TODO: Formular später mit Backend verbinden -->
+                    <form action="#" method="post" class="newsletter-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Dein Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Deine E-Mail Adresse" required class="form-input">
+                        </div>
+                        <input type="hidden" name="produkt" value="fermented-gold">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Auf die Warteliste setzen</button>
+                    </form>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px;">Die Warteliste ist aktuell im Aufbau. Du kannst dich bald eintragen.</p>
                 </div>
             </div>
         </section>

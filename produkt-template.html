@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[PRODUKTNAME] | Brombeerkönig</title>
+    <meta name="description" content="[Kurze SEO-Beschreibung des Produkts]">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="" class="header-logo-img" onerror="this.style.display='none'">
+                <div class="logo-text-wrapper">Brombeerkönig <span class="logo-sub">BBK</span></div>
+            </a>
+            <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#start" class="nav-item">Start</a></li>
+                <li><a href="produkte.html" class="nav-item active">Produkte</a></li>
+                <li><a href="wissen.html" class="nav-item">Wissen</a></li>
+                <li><a href="community.html" class="nav-item">Community</a></li>
+                <li><a href="ueber-uns.html" class="nav-item">Über BBK</a></li>
+                <li><a href="#kontakt" class="nav-item">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 80vh;">
+        
+        <!-- 1. PRODUKT-HERO -->
+        <section id="produkt-hero" class="fg-section" style="padding-top: 40px;">
+            <div class="container two-col-grid">
+                <div class="reveal">
+                    <!-- Farbe des Badges anpassen (glow-gold, glow-red etc.) -->
+                    <span class="product-badge glow-silver" style="margin-bottom: 20px;">[STATUS]</span>
+                    <h1 style="font-size: 4rem; margin-bottom: 20px; color: var(--color-cream);">[PRODUKTNAME]</h1>
+                    <p style="font-size: 1.5rem; color: var(--color-gold); margin-bottom: 20px; font-family: var(--font-heading); font-style: italic;">[Subline / Claim]</p>
+                    <p>[Kurze, emotionale Beschreibung. Was ist es und für wen ist es?]</p>
+                    <div class="hero-buttons" style="justify-content: flex-start; margin-top: 30px;">
+                        <a href="#sortenprofil" class="btn btn-primary">Varianten ansehen</a>
+                        <a href="#produkt-warteliste" class="btn btn-secondary">Zur Warteliste</a>
+                    </div>
+                </div>
+                <div class="reveal delay-1">
+                    <!-- TODO: echtes Produktfoto einfügen -->
+                    <div class="placeholder-img portrait">Platzhalter: [PRODUKTNAME] Hero-Shot</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. DETAILS & GRUNDIDEE -->
+        <section id="details" style="padding-top: 80px;">
+            <div class="container">
+                <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="accent-heading">[Akzentwort]</span>
+                    <h2>Warum dieses Produkt?</h2>
+                    <p style="max-width: 700px; margin: 0 auto;">[Erklärt Nutzen, Idee und Rolle in der BBK-Welt.]</p>
+                </div>
+                <!-- Hier kommen die 4 Detail-Boxen rein -->
+                <div class="fg-grid reveal delay-1" style="--module-color: var(--color-gold);">
+                    <div class="fg-module"><h4>01. Zutaten</h4><p>[Inhalt]</p></div>
+                    <div class="fg-module"><h4>02. Verarbeitung</h4><p>[Inhalt]</p></div>
+                    <div class="fg-module"><h4>03. Anwendung</h4><p>[Inhalt]</p></div>
+                    <div class="fg-module"><h4>04. Entwicklungsstand</h4><p>[Inhalt]</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SORTEN / VARIANTEN -->
+        <section id="sortenprofil">
+            <div class="container">
+                <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="accent-heading">Entwicklungsstand</span>
+                    <h2>Varianten in Planung</h2>
+                    <p style="max-width: 700px; margin: 0 auto;">Wir testen aktuell verschiedene Profile. Weitere Varianten in Entwicklung.</p>
+                </div>
+                <!-- Hier die Sorten Cards rein (wie bei Fermented Gold) -->
+            </div>
+        </section>
+
+        <!-- 4. SICHERHEIT / HINWEISE (WICHTIG FÜR LEBENSMITTEL!) -->
+        <section id="hinweise" style="padding-top: 20px;">
+            <div class="container">
+                <div class="transparency-box reveal">
+                    <h4>Wichtiger Hinweis zur Entwicklung</h4>
+                    <p><strong>Aktuell in Entwicklung:</strong> Dieses Produkt befindet sich noch in der Konzeptions- und Testphase. Es findet noch kein offizieller Verkauf statt.</p>
+                    <p><strong>Keine medizinischen Versprechen:</strong> Rezepturen, Haltbarkeit und Nährwertprofile können sich bis zum Release ändern.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA / WARTELISTE -->
+        <section id="produkt-warteliste" style="padding-top: 50px;">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <span class="accent-heading">Produkt-Warteliste</span>
+                    <h2>Als Erster erfahren</h2>
+                    <p style="max-width: 700px; margin: 0 auto 40px auto;">Trag dich ein, um ein Update zu erhalten, sobald [PRODUKTNAME] in die erste kleine Verkaufs-Charge geht.</p>
+                    
+                    <!-- TODO: Formular später mit Backend verbinden -->
+                    <form action="#" method="post" class="newsletter-form">
+                        <div class="form-group"><input type="text" placeholder="Dein Name" required class="form-input"></div>
+                        <div class="form-group"><input type="email" placeholder="Deine E-Mail Adresse" required class="form-input"></div>
+                        <!-- Hidden Field speichert direkt, von welchem Produkt der User kommt -->
+                        <input type="hidden" name="produkt" value="[PRODUKT-ID]">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Auf die Warteliste setzen</button>
+                    </form>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px;">Die Warteliste ist aktuell im Aufbau. Du kannst dich bald eintragen.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 50px;">
+        <!-- FOOTER CODE -->
+    </footer>
+
+    <!-- KONTAKT MODAL -->
+    <div id="contact-modal" class="modal-overlay">
+        <!-- MODAL CODE -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
