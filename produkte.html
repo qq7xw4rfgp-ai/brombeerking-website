@@ -23,12 +23,9 @@
             <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#start" class="nav-item">Start</a></li>
-                <li><a href="index.html#ueber-bbk" class="nav-item">Über BBK</a></li>
                 <li><a href="produkte.html" class="nav-item active">Produkte</a></li>
-                <li><a href="ressourcen.html" class="nav-item">Ressourcen</a></li>
-                <li><a href="fermented-gold.html" class="nav-item">Fermented Gold</a></li>
-                <li><a href="index.html#philosophie" class="nav-item">Philosophie</a></li>
-                <li><a href="index.html#status" class="nav-item">Status</a></li>
+                <li><a href="chargen-archiv.html" class="nav-item">Chargen-Archiv</a></li>
+                <li><a href="batch-archiv.html" class="nav-item">Batch-Archiv</a></li>
                 <li><a href="index.html#kontakt" class="nav-item">Kontakt</a></li>
             </ul>
         </div>
@@ -41,6 +38,34 @@
                     <span class="accent-heading">Vision & Pipeline</span>
                     <h2>Produktwelt im Aufbau</h2>
                     <p style="max-width: 700px; margin-bottom: 3rem;">Hier findest du eine Übersicht aller aktuellen Projekte, Testchargen und geplanten Ideen unserer Manufaktur.</p>
+                </div>
+
+                <!-- STATUS LEGENDE -->
+                <div class="glass-card reveal delay-1" style="margin-bottom: 4rem; padding: 40px; background: rgba(255,255,255,0.01);">
+                    <span class="accent-heading">Transparenz</span>
+                    <h3 style="margin-bottom: 30px; font-size: 1.8rem;">Entwicklungsstatus</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div>
+                            <span class="product-badge glow-silver" style="margin-bottom: 10px;">Idee / Geplant</span>
+                            <p style="font-size: 0.85rem; margin:0; line-height: 1.4;">Dieses Produkt ist als Konzept notiert und wird später detailliert geprüft.</p>
+                        </div>
+                        <div>
+                            <span class="product-badge glow-darkred" style="margin-bottom: 10px;">Testphase</span>
+                            <p style="font-size: 0.85rem; margin:0; line-height: 1.4;">Erste Rezepturen, kleine Mengen oder interne Versuche laufen.</p>
+                        </div>
+                        <div>
+                            <span class="product-badge glow-darkgreen" style="margin-bottom: 10px;">Aktive Experimente</span>
+                            <p style="font-size: 0.85rem; margin:0; line-height: 1.4;">Das Thema wird aktuell praktisch in der Manufaktur getestet und beobachtet.</p>
+                        </div>
+                        <div>
+                            <span class="product-badge glow-amber" style="margin-bottom: 10px;">Bald verfügbar</span>
+                            <p style="font-size: 0.85rem; margin:0; line-height: 1.4;">Produkt oder Download wird für die Veröffentlichung vorbereitet.</p>
+                        </div>
+                        <div>
+                            <span class="product-badge glow-lightblue" style="margin-bottom: 10px;">Auf Eis gelegt</span>
+                            <p style="font-size: 0.85rem; margin:0; line-height: 1.4;">Das Projekt bleibt im Archiv, wird aber vorerst nicht aktiv weiterentwickelt.</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="products-grid">
@@ -192,14 +217,34 @@
             </div>
         </section>
 
-        <section id="ideen" style="padding-top: 50px;">
+        <!-- PRODUKT-WARTELISTE -->
+        <section id="produkt-warteliste" style="padding-top: 50px;">
             <div class="container">
                 <div class="contact-box reveal">
-                    <span class="accent-heading">Deine Ideen</span>
-                    <h2>Gestalte mit uns</h2>
-                    <p style="max-width: 700px; margin: 0 auto;">Da du bis hier unten gelesen hast, interessierst du dich wirklich für die Produktwelt von Brombeerkönig. Deswegen meld dich doch gerne unter einer der folgenden Möglichkeiten und schlag aktiv Sorten, Linien oder ganz neue Produktarten vor, die wir dann gerne austesten und dokumentieren werden.</p>
-                    <br><br>
-                    <a href="#kontakt" class="btn btn-primary">Idee einreichen / Kontakt aufnehmen</a>
+                    <span class="accent-heading">Produkt-Warteliste</span>
+                    <h2>Als Erster erfahren</h2>
+                    <p style="max-width: 700px; margin: 0 auto 40px auto;">Erfahre als Erster, wenn neue BBK-Produkte verfügbar sind oder in die offizielle Testphase gehen.</p>
+                    
+                    <!-- TODO: Formular später mit Backend verbinden -->
+                    <form action="#" method="post" class="newsletter-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Dein Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Deine E-Mail Adresse" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-input" required>
+                                <option value="" disabled selected>Welches Produkt interessiert dich?</option>
+                                <option value="fg">Fermented Gold</option>
+                                <option value="power-bars">Power Bars</option>
+                                <option value="spices">Natural Spices</option>
+                                <option value="alle">Alle Produkte</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Zur Produkt-Warteliste</button>
+                    </form>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px;">Die Warteliste ist aktuell im Aufbau. Du kannst dich bald eintragen.</p>
                 </div>
             </div>
         </section>
@@ -211,12 +256,17 @@
                 <img src="logo.png" alt="" class="footer-logo-img" onerror="this.style.display='none'">
             </div>
             <div class="footer-links">
-                <a href="index.html">Startseite</a>
                 <a href="produkte.html">Produkte</a>
                 <a href="ressourcen.html">Ressourcen</a>
-                <a href="fermented-gold.html">Fermented Gold</a>
+                <a href="ueber-uns.html">Über uns</a>
+                <a href="bibliothek.html">Bibliothek</a>
+                <a href="community.html">Community</a>
+                <a href="#kontakt">Kontakt</a>
                 <a href="impressum.html">Impressum</a>
                 <a href="datenschutz.html">Datenschutz</a>
+                <a href="#" class="disabled-link">Händler / B2B</a>
+                <a href="#" class="disabled-link">Presse</a>
+                <a href="batch-archiv.html">Batch-Archiv</a>
             </div>
             <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2024 Brombeerkönig.</p>
         </div>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargen-Archiv | Brombeerkönig</title>
+    <meta name="description" content="Transparentes Archiv für Chargen, Test-Batches, Lernpunkte und Produktentwicklung der Brombeerkönig Manufaktur.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="" class="header-logo-img" onerror="this.style.display='none'">
+                <div class="logo-text-wrapper">Brombeerkönig <span class="logo-sub">BBK</span></div>
+            </a>
+            <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#start" class="nav-item">Start</a></li>
+                <li><a href="produkte.html" class="nav-item">Produkte</a></li>
+                <li><a href="chargen-archiv.html" class="nav-item">Chargen-Archiv</a></li>
+                <li><a href="batch-archiv.html" class="nav-item active">Batch-Archiv</a></li>
+                <li><a href="index.html#kontakt" class="nav-item">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 80vh;">
+        
+        <!-- HERO -->
+        <section id="batch-start" class="fg-section">
+            <div class="container">
+                <div class="fg-teaser reveal" style="margin-bottom: 2rem;">
+                    <span class="accent-heading" style="color: var(--color-gold);">Dokumentation & Transparenz</span>
+                    <h2>Batch-Archiv</h2>
+                    <p style="max-width: 800px; margin: 0 auto;">Hier dokumentieren wir unsere Test-Batches, Fehler und Erfolge. Ein transparenter Einblick in die Entwicklung unserer Rezepturen – vom ersten Versuch bis zum finalen Produkt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BATCH SUCHE & FILTER -->
+        <section id="batch-filter" style="padding-top: 20px; padding-bottom: 40px;">
+            <div class="container">
+                <div class="glass-card reveal" style="padding: 30px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; border-color: var(--color-gold-dim);">
+                    <div style="flex-grow: 1; max-width: 400px;">
+                        <input type="text" id="batchSearch" class="form-input" placeholder="Nach Sorte oder Batch-Code suchen..." style="margin-bottom: 0; border-color: rgba(255,255,255,0.2);">
+                    </div>
+                    <div>
+                        <select id="batchSort" class="form-input" style="margin-bottom: 0; border-color: rgba(255,255,255,0.2);">
+                            <option value="desc">Neueste zuerst</option>
+                            <option value="asc">Älteste zuerst</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BATCH LISTE -->
+        <section id="batches" style="padding-top: 0;">
+            <div class="container">
+                <div class="batch-list" id="batchList">
+                    
+                    <!-- BATCH FGBB-003 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-15" data-search="fermented gold brombeere fgbb-003">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGBB-003</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGBB-003</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Brombeere</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Ergebnis</h4>
+                                <p>Die wilde Fermentation ist sehr stark gestartet. Die Brombeere hat dem rohen Honig eine tiefviolette Farbe und eine überraschend lebendige, feine Säure verliehen.</p>
+                                <h4>Lernpunkt</h4>
+                                <p>Der Druckaufbau im Glas war höher als erwartet. Reifezeit, Fruchtmenge und das Entlüften der Gläser müssen für kommende Chargen genauer standardisiert werden.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGHB-003 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-14" data-search="fermented gold himbeere fghb-003">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGHB-003</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGHB-003</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Himbeere</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Die Himbeere bringt klare Frucht und eine lebendige, tanzende Säure. Verschiedene Honigsorten (Heidehonig, Waldhonig) werden in Nebenbatches getestet.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGBD-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-13" data-search="fermented gold beeren duo fgbd-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGBD-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGBD-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Beeren Duo</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Verbindung von Himbeere und Brombeere zu einer lebendigen Signature-Sorte. Helle Säure trifft auf dunkle Tiefe.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGGA-002 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-12" data-search="fermented gold granatapfel fgga-002">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGGA-002</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGGA-002</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Granatapfel</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Granatapfel bringt herbe Frische und eine noble Tiefe. Wirkt erwachsener und klarer als die reinen Beerensorten.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGEB-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-11" data-search="fermented gold erdbeer fgeb-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGEB-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGEB-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Erdbeer</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Erdbeere bringt milde Frucht und sommerliche Süße. Ein weicher, runder Ansatz, der als zugängliche Einsteigersorte dient.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FG2WT-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-10" data-search="fermented gold wintertraum fg2wt-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FG2WT-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FG2WT-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Wintertraum</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Wärmend, würzig, tief. Saisonale Idee mit Apfel und Zimt für eine gemütliche Richtung in kalten Tagen.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FG2IB-002 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-09" data-search="fermented gold immunboost fg2ib-002">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FG2IB-002</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FG2IB-002</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Immunboost</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Kraftvoll, würzig, funktional. Ingwer, Zitrus und Botanicals kombiniert zu einem intensiven Honigferment-Prototyp für natürliche Stärke.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGCH-002 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-08" data-search="fermented gold chili fgch-002">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGCH-002</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGCH-002</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Chili</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Süß, scharf, mutig. Honigsüße verbunden mit der Wärme und Schärfe von Chilis. Experimentelle Sorte für starke Kontraste.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGKW-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-07" data-search="fermented gold kiwi fgkw-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGKW-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGKW-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Kiwi</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Kiwi bringt eine grüne, frische und leicht exotische Richtung in Fermented Gold. Spannend für Säure und moderne Geschmacksprofile.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGBBRR-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-06" data-search="fermented gold brombeer royal ratio fgbbrr-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGBBRR-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGBBRR-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Brombeer Royal Ratio</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Eine präzisere Variante der Signature-Sorte. Bewusste Optimierung des Verhältnisses zwischen Honig, Brombeere, Reife und Struktur.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-silver" style="margin: 0;">Konzeptaufbau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGAP-002 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-05" data-search="fermented gold apfel fgap-002">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGAP-002</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGAP-002</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Apfel</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Apfel bringt weiche Frucht und eine natürliche, milde Süße. Sehr vertraut und ideal für Kombinationen mit Zimt oder Vanille.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGZT-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-04" data-search="fermented gold zitrone fgzt-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGZT-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGZT-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Zitrone</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Die Zitrone bringt eine direkte, saubere Säure und macht den Honig frischer und leichter. Wirkt sehr aktivierend.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGWH-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-03" data-search="fermented gold wilde heidelbeere fgwh-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGWH-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGWH-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Wilde Heidelbeere</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Dunkle, waldige Fruchtnote im Honig. Wirkt tiefer und mystischer als klassische Beerenvarianten.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGIW-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-02" data-search="fermented gold ingwer fgiw-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGIW-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGIW-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Ingwer</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Ingwer bringt natürliche Schärfe, Wärme und einen aktivierenden Charakter. Ein starkes, funktionales Profil.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGIWs-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-05-01" data-search="fermented gold ingwer & salz fgiws-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGIWs-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGIWs-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Ingwer & Salz</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Salz bricht die Süße und hebt die Würze. Verleiht dem Ferment eine klare Mineral-Elixier-Richtung.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH FGZZ-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2026-04-30" data-search="fermented gold zitronenzeste fgzz-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch FGZZ-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>FGZZ-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q2 / 2026</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Fermented Gold</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Zitronenzeste</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Status</h4>
+                                <p>Feinere, edlere Schwester der Zitronen-Sorte. Weniger Säure, dafür mehr Duft und ätherische Öle.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkgreen" style="margin: 0;">Aktive Experimente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BATCH BBK-PB-001 -->
+                    <div class="glass-card batch-card batch-item reveal delay-1" data-date="2024-08-01" data-search="power bars frucht nuss bbk-pb-001">
+                        <div class="batch-image-wrapper">
+                            <div class="placeholder-img portrait">Platzhalter: Foto Batch BBK-PB-001</div>
+                        </div>
+                        <div class="batch-content">
+                            <div class="batch-meta-grid">
+                                <div class="batch-meta-item"><span>Batch-Code</span><strong>BBK-PB-001</strong></div>
+                                <div class="batch-meta-item"><span>Datum</span><strong>Q3 / 2024</strong></div>
+                                <div class="batch-meta-item"><span>Produkt</span><strong>Power Bars</strong></div>
+                                <div class="batch-meta-item"><span>Sorte</span><strong>Frucht & Nuss</strong></div>
+                            </div>
+                            <div class="batch-notes">
+                                <h4>Ergebnis</h4>
+                                <p>Erste Prototypen für die Textur. Die Kombination aus Datteln und Mandeln bringt eine gute Grundstabilität, jedoch ist der Biss noch etwas zu weich für den Alltag.</p>
+                                <h4>Lernpunkt</h4>
+                                <p>In der nächsten Charge werden wir den Anteil an trockenen Kernen erhöhen, um mehr Struktur zu schaffen, ohne auf künstliche Bindemittel zurückgreifen zu müssen.</p>
+                            </div>
+                            <div>
+                                <span class="product-badge glow-darkred" style="margin: 0;">Testphase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSPARENZ HINWEIS GLOBAL -->
+        <section id="hinweise" style="padding-top: 50px;">
+            <div class="container">
+                <div class="transparency-box reveal">
+                    <h4>Wichtiger Hinweis</h4>
+                    <p><strong>Manufaktur im Aufbau:</strong> Die hier dokumentierten Chargen und Batches sind reine Testreihen zur Produktentwicklung. Es findet noch kein offizieller Verkauf statt.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 50px;">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="" class="footer-logo-img" onerror="this.style.display='none'">
+            </div>
+            <div class="footer-links">
+                <a href="produkte.html">Produkte</a>
+                <a href="ressourcen.html">Ressourcen</a>
+                <a href="bibliothek.html">Bibliothek</a>
+                <a href="community.html">Community</a>
+                <a href="ueber-uns.html">Über BBK</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+                <a href="#" class="disabled-link">Händler / B2B</a>
+                <a href="#" class="disabled-link">Presse</a>
+                <a href="batch-archiv.html">Batch-Archiv</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2024 Brombeerkönig.</p>
+        </div>
+    </footer>
+
+    <!-- KONTAKT MODAL -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <span class="accent-heading">Austausch & Anfrage</span>
+            <h3 style="font-size: 2rem; margin-bottom: 10px;">Kontakt</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">Wähle deinen bevorzugten Weg, um mit uns ins Gespräch zu kommen.</p>
+            <!-- Modal Buttons -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('batchSearch');
+            const sortSelect = document.getElementById('batchSort');
+            const batchList = document.getElementById('batchList');
+            const batchItems = Array.from(batchList.querySelectorAll('.batch-item'));
+
+            function filterAndSort() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const sortOrder = sortSelect.value;
+
+                let visibleItems = batchItems.filter(item => {
+                    const searchText = item.getAttribute('data-search').toLowerCase();
+                    const isVisible = searchText.includes(searchTerm);
+                    item.style.display = isVisible ? '' : 'none';
+                    return isVisible;
+                });
+
+                visibleItems.sort((a, b) => {
+                    const dateA = a.getAttribute('data-date');
+                    const dateB = b.getAttribute('data-date');
+                    return sortOrder === 'desc' ? (dateA < dateB ? 1 : -1) : (dateA > dateB ? 1 : -1);
+                });
+
+                visibleItems.forEach(item => batchList.appendChild(item));
+            }
+
+            searchInput.addEventListener('input', filterAndSort);
+            sortSelect.addEventListener('change', filterAndSort);
+            filterAndSort();
+        });
+    </script>
+</body>
+</html>

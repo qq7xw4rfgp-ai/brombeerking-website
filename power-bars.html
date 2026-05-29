@@ -23,26 +23,43 @@
             <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#start" class="nav-item">Start</a></li>
-                <li><a href="index.html#ueber-bbk" class="nav-item">Über BBK</a></li>
                 <li><a href="produkte.html" class="nav-item active">Produkte</a></li>
-                <li><a href="ressourcen.html" class="nav-item">Ressourcen</a></li>
-                <li><a href="fermented-gold.html" class="nav-item">Fermented Gold</a></li>
-                <li><a href="index.html#philosophie" class="nav-item">Philosophie</a></li>
-                <li><a href="index.html#status" class="nav-item">Status</a></li>
+                <li><a href="chargen-archiv.html" class="nav-item">Chargen-Archiv</a></li>
+                <li><a href="batch-archiv.html" class="nav-item">Batch-Archiv</a></li>
                 <li><a href="index.html#kontakt" class="nav-item">Kontakt</a></li>
             </ul>
         </div>
     </header>
 
     <main style="padding-top: 100px; min-height: 80vh;">
-        <section id="info" class="fg-section">
-            <div class="container">
-                <div class="fg-teaser reveal">
-                    <span class="accent-heading" style="color: #B64242;">Kernprojekt in der Entwicklung</span>
-                    <h2>Power Bars</h2>
-                    <p>Energie. Substanz. Alltag. Leistung.<br>Eines der ersten festen Kernprodukte von Brombeerkönig: natürliche Energie-Riegel auf Basis echter Zutaten, entwickelt für Training, Arbeit, lange Tage und bewusste Ernährung.</p>
+        <!-- 1. PRODUKT-HERO -->
+        <section id="produkt-hero" class="fg-section" style="padding-top: 40px;">
+            <div class="container two-col-grid">
+                <div class="reveal">
+                    <span class="product-badge glow-red" style="margin-bottom: 20px;">Kernprojekt in der Entwicklung</span>
+                    <h1 style="font-size: 4rem; margin-bottom: 20px; color: var(--color-cream);">Power Bars</h1>
+                    <p style="font-size: 1.5rem; color: #B64242; margin-bottom: 20px; font-family: var(--font-heading); font-style: italic;">Energie. Substanz. Alltag. Leistung.</p>
+                    <p>Eines der ersten festen Kernprodukte von Brombeerkönig: natürliche Energie-Riegel auf Basis echter Zutaten, entwickelt für Training, Arbeit, lange Tage und bewusste Ernährung.</p>
+                    <div class="hero-buttons" style="justify-content: flex-start; margin-top: 30px;">
+                        <a href="#sortenprofil" class="btn btn-primary">Varianten ansehen</a>
+                        <a href="#produkt-warteliste" class="btn btn-secondary">Zur Warteliste</a>
+                    </div>
                 </div>
-                
+                <div class="reveal delay-1">
+                    <!-- TODO: echtes Produktfoto einfügen -->
+                    <div class="placeholder-img portrait">Platzhalter: Power Bars Hero-Shot</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. DETAILS & GRUNDIDEE -->
+        <section id="details" style="padding-top: 80px;">
+            <div class="container">
+                <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="accent-heading" style="color: #B64242;">Konzept & Idee</span>
+                    <h2>Warum dieses Produkt?</h2>
+                    <p style="max-width: 700px; margin: 0 auto;">Wir glauben, dass schnelle Energie nicht aus billigen Füllstoffen bestehen muss. Power Bars bringen die ehrliche Philosophie von Brombeerkönig in eine kompakte Form.</p>
+                </div>
                 <div class="fg-grid reveal delay-1" style="--module-color: #B64242;">
                     <div class="fg-module">
                         <h4>01. Kraftbasis</h4>
@@ -68,14 +85,68 @@
             </div>
         </section>
 
-        <section id="sortenprofil" style="padding-top: 50px;">
+        <!-- 3. SORTEN / VARIANTEN -->
+        <section id="sortenprofil">
+            <div class="container">
+                <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="accent-heading">Entwicklungsstand</span>
+                    <h2>Varianten in Planung</h2>
+                    <p style="max-width: 700px; margin: 0 auto;">Wir testen aktuell verschiedene Nährstoffprofile. Echte Sorten werden nach der internen Testphase vorgestellt.</p>
+                </div>
+                <div class="varieties-grid">
+                    <!-- Platzhalter Sorte -->
+                    <div class="glass-card reveal delay-1" style="padding: 40px; text-align: center;">
+                        <span class="variety-claim" style="color: #B64242;">Testphase</span>
+                        <h4>Frucht & Nuss</h4>
+                        <p style="font-size: 0.95rem;">Eine Basis aus Datteln und Mandeln, kombiniert mit gefriergetrockneten Beeren.</p>
+                    </div>
+                    <!-- Platzhalter Sorte -->
+                    <div class="glass-card reveal delay-2" style="padding: 40px; text-align: center;">
+                        <span class="variety-claim" style="color: #B64242;">Idee</span>
+                        <h4>Cacao & Crunch</h4>
+                        <p style="font-size: 0.95rem;">Roher Kakao, Walnüsse und eine Prise Meersalz für tiefe Energie.</p>
+                    </div>
+                    <!-- Platzhalter Sorte -->
+                    <div class="glass-card reveal delay-3" style="padding: 40px; text-align: center;">
+                        <span class="variety-claim" style="color: #B64242;">Idee</span>
+                        <h4>Pure Berry</h4>
+                        <p style="font-size: 0.95rem;">Fokussiert auf die Kraft der Brombeere mit feiner Säure und Hafer-Struktur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SICHERHEIT / HINWEISE -->
+        <section id="hinweise" style="padding-top: 20px;">
+            <div class="container">
+                <div class="transparency-box reveal">
+                    <h4>Wichtiger Hinweis zur Entwicklung</h4>
+                    <p><strong>Aktuell in Entwicklung:</strong> Dieses Produkt befindet sich noch in der Konzeptions- und Testphase. Es findet noch kein offizieller Verkauf statt.</p>
+                    <p><strong>Keine medizinischen Versprechen:</strong> Unsere Power Bars sind Lebensmittel für den bewussten Alltag und keine medizinischen Präparate. Rezepturen, Haltbarkeit und Nährwertprofile können sich bis zum Release ändern.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA / WARTELISTE -->
+        <section id="produkt-warteliste" style="padding-top: 50px;">
             <div class="container">
                 <div class="contact-box reveal">
-                    <span class="accent-heading" style="color: #B64242;">Sortenprofil</span>
-                    <h2>Deine Idee für uns</h2>
-                    <p style="max-width: 700px; margin: 0 auto;">Aktuell haben wir noch keine Sorten und Linien definiert. Du hast eine Idee. Meld dich bei uns und wir testen sie zusammen.</p>
-                    <br><br>
-                    <a href="#kontakt" class="btn btn-primary">Idee einreichen / Kontakt aufnehmen</a>
+                    <span class="accent-heading">Produkt-Warteliste</span>
+                    <h2>Als Erster erfahren</h2>
+                    <p style="max-width: 700px; margin: 0 auto 40px auto;">Trag dich ein, um ein Update zu erhalten, sobald die Power Bars in die erste kleine Verkaufs-Charge gehen.</p>
+                    
+                    <!-- TODO: Formular später mit Backend verbinden -->
+                    <form action="#" method="post" class="newsletter-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Dein Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Deine E-Mail Adresse" required class="form-input">
+                        </div>
+                        <input type="hidden" name="produkt" value="power-bars">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Auf die Warteliste setzen</button>
+                    </form>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px;">Die Warteliste ist aktuell im Aufbau. Du kannst dich bald eintragen.</p>
                 </div>
             </div>
         </section>
