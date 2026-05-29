@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wissen & Ressourcen | Brombeerkönig</title>
+    <meta name="description" content="Tiefgreifendes Wissen, Ressourcen und die BBK Bibliothek rund um Fermentation, Garten und natürliche Ernährung.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="" class="header-logo-img" onerror="this.style.display='none'">
+                <div class="logo-text-wrapper">Brombeerkönig <span class="logo-sub">BBK</span></div>
+            </a>
+            <button class="mobile-btn" id="mobile-btn" aria-label="Menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#start" class="nav-item">Start</a></li>
+                <li><a href="produkte.html" class="nav-item">Produkte</a></li>
+                <li><a href="wissen.html" class="nav-item active">Wissen</a></li>
+                <li><a href="community.html" class="nav-item">Community</a></li>
+                <li><a href="ueber-uns.html" class="nav-item">Über BBK</a></li>
+                <li><a href="#kontakt" class="nav-item">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 80vh;">
+        
+        <!-- HERO -->
+        <section id="wissen-start" class="fg-section">
+            <div class="container">
+                <div class="fg-teaser reveal" style="margin-bottom: 2rem;">
+                    <span class="accent-heading" style="color: var(--color-gold);">Lernen & Verstehen</span>
+                    <h2>Wissensbereich</h2>
+                    <p style="max-width: 800px; margin: 0 auto;">Transparenz bedeutet für uns auch, Wissen zu teilen. Entdecke den Ursprung unserer Rohstoffe, tauche in unsere Bibliothek ein oder lerne direkt aus unserem Manufaktur-Alltag.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WISSENS-HUBS -->
+        <section id="hubs" style="padding-top: 20px;">
+            <div class="container">
+                <div class="products-grid">
+                    <a href="ressourcen.html" class="glass-card product-item reveal delay-1">
+                        <div>
+                            <span class="product-badge glow-darkgreen">Orte & Pflanzen</span>
+                            <h3>Ressourcen-Netzwerk</h3>
+                            <p>Unsere Gärten, Versuchsstationen und die Herkunft unserer natürlichen Rohstoffe.</p>
+                        </div>
+                        <span class="variety-link-text">Netzwerk ansehen</span>
+                    </a>
+                    
+                    <a href="bibliothek.html" class="glass-card product-item reveal delay-2">
+                        <div>
+                            <span class="product-badge glow-silver">Downloads & Guides</span>
+                            <h3>BBK Bibliothek</h3>
+                            <p>Handbücher, Rezepte und tiefgreifendes Wissen rund um Fermentation und natürliche Ernährung.</p>
+                        </div>
+                        <span class="variety-link-text">Zur Bibliothek</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 50px;">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="" class="footer-logo-img" onerror="this.style.display='none'">
+            </div>
+            <div class="footer-links">
+                <a href="produkte.html">Produkte</a>
+                <a href="ressourcen.html">Ressourcen</a>
+                <a href="bibliothek.html">Bibliothek</a>
+                <a href="community.html">Community</a>
+                <a href="ueber-uns.html">Über BBK</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+                <a href="#" class="disabled-link">Händler / B2B</a>
+                <a href="#" class="disabled-link">Presse</a>
+                <a href="batch-archiv.html">Batch-Archiv</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2024 Brombeerkönig. Manufaktur im Aufbau.</p>
+        </div>
+    </footer>
+
+    <!-- KONTAKT MODAL -->
+    <div id="contact-modal" class="modal-overlay">
+        <!-- Modal Content bleibt identisch, wird über script.js gesteuert -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
